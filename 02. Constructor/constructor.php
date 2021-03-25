@@ -7,16 +7,15 @@
         $this->name = $name;
         $this->color = $color;
         }
-        function get_name() {
-            return $this->name;
+        function get_details() {
+            echo "Name = ".$this -> name;
+            echo "<br>";
+            echo "Color = ".$this -> color;
         }
-        function get_color() {
-            return $this->color;
-        }
-
+        
     }
 
     $apple = new fruit('Apple','Red');  //Creating object
-    echo "Name = ".$apple -> get_name();
-    echo "<br>";
-    echo "Color = ".$apple -> get_color();
+    $apple -> get_details();
+    
+?>
