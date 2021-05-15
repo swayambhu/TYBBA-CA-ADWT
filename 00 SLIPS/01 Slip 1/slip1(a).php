@@ -56,5 +56,5 @@ if(isset($_POST['submit']))
     else echo "Please enter both 2 nos";
 }
 else
-    die("");
+    die("Please enter values to process");
 ?>
