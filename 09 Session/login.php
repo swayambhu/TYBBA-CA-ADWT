@@ -1,11 +1,27 @@
+
 <?php
-    $auth_yes = 0;
-    session_start();
-    $_SESSION('t');
-    $tm = time();
+
+session_start();
+$t=date("1,d-m-y h:i:s",time()+20);
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+   if($_POST["name"]=='admin' && $_POST["pwd"]=='admin')
+   {
+      ?>
+   <html>
+   <body>
+
+   <form action="new.php" method=get>
+   <input type='hidden' name='etime' value="<?php echo $t?>">
+   Enter Name : <input type=textbox name=uname><br>
+   Enter City : <input type=textbox name=city><br>
+   Enter Phone No : <input type=textbox name=pno><br>
+   <input type=submit name=submit value=DISPLAY>
+   </form>
+   </body>
+   </html>
+   <?php
+   }
+   else echo "Invalid Username Or Password";
+}
+
 ?>
-<form method="GET" action="new.php">
-    <label for="name"><input type="text" name="name" id="name"></label></br>
-    <label for="rollNo"><input type="number" name="rollNo" id="rollNo"></label></br>
-    <input type="submit" value="submit">
-</form>
