@@ -12,11 +12,12 @@ $uid='root';
 $pwd='';
 $db='testdb';
 
+//hostname, username, password, databaseName
 $con=mysqli_connect('localhost',$uid,$pwd,$db) or die("wrong");
 
 echo "Great work connection established!";
 
-$sql="Select * from Login where uid='$u' and pwd='$p'";
+$sql="Select * from Login where username='$u' and password='$p'";
 $r=mysqli_query($con,$sql);
 $n=mysqli_num_rows($r);
 
@@ -30,7 +31,7 @@ mysqli_close($con);
 }
 ?>
 
-<form name="f1"action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST"  >
+<form name="f1" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST"  >
 
 <b>USERNAME :</b><br/>
 <input type="text" name="txtuid"><br/>
