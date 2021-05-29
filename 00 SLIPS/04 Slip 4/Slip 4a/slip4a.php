@@ -1,9 +1,9 @@
 <?php
 class calculator
 {
-	var $no1;
-	var $no2;
-	function calculator($n1,$n2)
+	public $no1;
+	public $no2;
+	function __construct($n1,$n2)
 	{
 	$this->no1=$n1;
 	$this->no2=$n2;
@@ -29,8 +29,8 @@ class calculator
 	return $d;
 	}
 }
-$ch=$_POST['ch'];
-$cal=new calculator(9,5);
+$ch=$_POST['ch']??null;
+$cal=new calculator(15,5);
 
 echo "Addition:".$cal->add();" <br>";
 echo "<br>Subtraction:".$cal->sub();
