@@ -3,7 +3,7 @@
 <title>slip20a</title></head>
 <body>
 <?php
-$a=$_GET["sub"];
+$a=$_GET["sub"]??null;
 if(is_null($a))
 {
 ?>
@@ -12,7 +12,7 @@ Select your subject: <br>
 <select name="sub[]" multiple>
 <option value="php">php</option>
 <option value="java">java</option>
-<option value="testing">Software Testing</option>
+<option value="Software testing">Software Testing</option>
 </select>
 <input type="submit" name="s" value="select subject">
 </form>
@@ -22,8 +22,8 @@ else
 {
 if(array_key_exists('s',$_GET))
 {
-$desc=join(" & ",$a);
-printf("your selection %s",$desc);
+$d=join(" * ",$a);
+printf("your selection %s",$d);
 }
 }
 ?>
