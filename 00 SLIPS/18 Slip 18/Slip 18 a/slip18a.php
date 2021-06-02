@@ -2,7 +2,7 @@
 $ct=$_POST['s'];
 $t=$_POST['bnm'];
 $p=$_POST['prc'];
-echo  "<h2> $ct  $t  $p";
+echo  " <h2> $ct  $t  $p <br/>";
 
 $doc =new DOMDocument('1.0','utf-8');
 $doc->load("slip18a.xml");
