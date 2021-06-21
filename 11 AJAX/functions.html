@@ -1,0 +1,23 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+      <button onclick="factorial(6)">Try it</button>
+      <p id="demo"></p>
+    <script>
+      function factorial(num1) {
+        var fact = 1;
+        var i;
+        for (i = 1; i <= num1; i++) {
+            fact = fact * i;
+        }
+        document.getElementById("demo").innerHTML = fact;
+        return fact;
+      }
+    </script>
+  </body>
+</html>

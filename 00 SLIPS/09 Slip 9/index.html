@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slip 9</title>
+    <script language="javascript">
+        var xmlhttp = new XMLHttpRequest();
+        function fun1(){
+            var str = document.getElementById("t1").value;
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    document.getElementById("d1").innerHTML = xmlhttp.responseText;
+                }else{
+                    document.getElementById("d1").innerHTML = "<strong> Status is not 200 </strong>"
+                }
+            };
+            xmlhttp.open("GET", "Slip9.php?f="+str, true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <form name="f1" method="GET">
+        Enter File Name: <br/>
+        <input type="text" id="t1"><br/>
+        <input type="button" onclick="fun1()" value="Display contents of a file"><br/>
+        <div id="d1" style="font-size:20px;">
+            
+        </div>
+    </form>
+</body>
+</html>

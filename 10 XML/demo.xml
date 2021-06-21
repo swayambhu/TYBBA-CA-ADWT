@@ -1,0 +1,16 @@
+<!-- Prolog -->
+<?xml version="1.0" encoding="utf-8" standalone="no" ?> 
+    <Company>
+        <Employee category="technical">
+            <FirstName>Shivam</FirstName>
+            <LastName>Mahajan</LastName>
+            <ContactNo>1234567890</ContactNo>
+        </Employee>
+
+        <Employee category="non-techinical">
+            <FirstName>Name</FirstName>
+            <LastName>Lastname</LastName>
+            <ContactNo>0987654321</ContactNo>
+        </Employee>
+
+    </Company>
